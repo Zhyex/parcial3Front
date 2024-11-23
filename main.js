@@ -48,11 +48,11 @@ function startSequentialTimers() {
 }
 
     // Iniciar el primer cronómetro
-    startTimer(timeCrono, timerDisplay1, () => {
-        // Cuando el primer cronómetro termina, inicia el segundo
-        startTimer(timeCrono, timerDisplay2);
+    startTimer(totalTime, timerDisplay1, () => {
+        // Cuando el primer cronómetro termine, iniciar el segundo cronómetro
+        startTimer(totalTime, timerDisplay2);
     });
 }
 
-// Evento para el botón de inicio
+// Agregar evento al botón para iniciar los cronómetros
 startAllTimers.addEventListener('click', startSequentialTimers);
