@@ -33,54 +33,50 @@
       </div>
     </div>
 
-    <h1>Tres Temporizadores Simultáneos</h1>
+    <h1>Cronómetros Simultáneos</h1>
     <div class="containerTwo">
-      <label for="inputTime3">Ingrese tiempo del primer temporizador</label
-      ><br />
+      <label for="inputTime3">Ingrese tiempos para los cronómetros</label>
       <div class="reloj">
         <p>Minutos : segundos</p>
         <input type="number" name="minsDec3" id="minsDec3" min="0" max="9" />
         <input type="number" name="minsUni3" id="minsUni3" min="0" max="9" />
         <input type="number" name="secsDec3" id="secsDec3" min="0" max="9" />
         <input type="number" name="secsUni3" id="secsUni3" min="0" max="9" />
+              <!-- Temporizador 1 -->
+      <h4>Cronómetro 1</h4>
+      <div class="cronometro" id="cronometro3">
+        <p id="timerDisplay3">00:00</p>
+        <p id="estadoTimer3">Detenido</p>
       </div>
-      <label for="inputTime4">Ingrese tiempo del segundo temporizador</label
-      ><br />
+      </div>
       <div class="reloj">
         <p>Minutos : segundos</p>
         <input type="number" name="minsDec4" id="minsDec4" min="0" max="9" />
         <input type="number" name="minsUni4" id="minsUni4" min="0" max="9" />
         <input type="number" name="secsDec4" id="secsDec4" min="0" max="9" />
         <input type="number" name="secsUni4" id="secsUni4" min="0" max="9" />
+              <!-- Temporizador 2 -->
+      <h4>Cronómetro 2</h4>
+      <div class="cronometro" id="cronometro4">
+        <p id="timerDisplay4">00:00</p>
+        <p id="estadoTimer4">Detenido</p>
       </div>
-      <label for="inputTime5">Ingrese tiempo del tercer temporizador</label
-      ><br />
+      </div>
       <div class="reloj">
         <p>Minutos : segundos</p>
         <input type="number" name="minsDec5" id="minsDec5" min="0" max="9" />
         <input type="number" name="minsUni5" id="minsUni5" min="0" max="9" />
         <input type="number" name="secsDec5" id="secsDec5" min="0" max="9" />
         <input type="number" name="secsUni5" id="secsUni5" min="0" max="9" />
-      </div>
-      <button id="startAllSimultaneousTimers">Iniciar Temporizadores</button>
-      <!-- Temporizador 1 -->
-      <h4>Temporizador 1</h4>
-      <div class="cronometro" id="cronometro3">
-        <p id="timerDisplay3">00:00</p>
-        <p id="estadoTimer3">Detenido</p>
-      </div>
-      <!-- Temporizador 2 -->
-      <h4>Temporizador 2</h4>
-      <div class="cronometro" id="cronometro4">
-        <p id="timerDisplay4">00:00</p>
-        <p id="estadoTimer4">Detenido</p>
-      </div>
-      <!-- Temporizador 3 -->
-      <h4>Temporizador 3</h4>
+              <!-- Temporizador 3 -->
+      <h4>Cronómetro 3</h4>
       <div class="cronometro" id="cronometro5">
         <p id="timerDisplay5">00:00</p>
         <p id="estadoTimer5">Detenido</p>
       </div>
+      </div>
+      <button id="startAllSimultaneousTimers">Iniciar Temporizadores</button>
+
     </div>
     <script src="main.js"></script>
   </body>

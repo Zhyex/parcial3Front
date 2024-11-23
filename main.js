@@ -87,9 +87,9 @@ function startSequentialTimers() {
 // Función para iniciar los temporizadores simultáneamente
 function startSimultaneousTimers() {
     const minsDec3 = parseInt(inputminsDec3.value, 10) * 10 || 0;
-    const minsUni3 = parseInt(inputminsUni3.value, 10);
+    const minsUni3 = parseInt(inputminsUni3.value, 10) || 0;
     const secsDec3 = parseInt(inputsecsDec3.value, 10) * 10 || 0;
-    const secsUni3 = parseInt(inputsecsUni3.value, 10);
+    const secsUni3 = parseInt(inputsecsUni3.value, 10) || 0;
 
     const minsDec4 = parseInt(inputminsDec4.value, 10) * 10 || 0;
     const minsUni4 = parseInt(inputminsUni4.value, 10) || 0;
