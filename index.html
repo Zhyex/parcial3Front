@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +9,36 @@
 <body>
     <h1>Cronómetros Secuenciales</h1>
     <div class="containerOne">
-        <label for="inputTime">Ingrese tiempo de los relojes</label><br>
+        <label for="inputTime1">Ingrese tiempo del primer cronómetro</label><br>
         <div class="reloj">
             <p>Minutos : segundos</p>
-            <input type="number" name="minsDec" id="minsDec" min="0" max="9">
-            <input type="number" name="minsUni" id="minsUni" min="0" max="9">
-            <input type="number" name="secsDec" id="secsDec" min="0" max="9">
-            <input type="number" name="secsUni" id="secsUni" min="0" max="9">
+            <input type="number" name="minsDec1" id="minsDec1" min="0" max="9">
+            <input type="number" name="minsUni1" id="minsUni1" min="0" max="9">
+            <input type="number" name="secsDec1" id="secsDec1" min="0" max="9">
+            <input type="number" name="secsUni1" id="secsUni1" min="0" max="9">
+        </div>
+        <label for="inputTime2">Ingrese tiempo del segundo cronómetro</label><br>
+        <div class="reloj">
+            <p>Minutos : segundos</p>
+            <input type="number" name="minsDec2" id="minsDec2" min="0" max="9">
+            <input type="number" name="minsUni2" id="minsUni2" min="0" max="9">
+            <input type="number" name="secsDec2" id="secsDec2" min="0" max="9">
+            <input type="number" name="secsUni2" id="secsUni2" min="0" max="9">
         </div>
         <button id="startAllTimers">Iniciar Cronómetros</button>
         <!--cronómetro 1-->
         <h4>Cronómetro 1</h4>
         <div class="cronometro" id="cronometro1">
             <p id="timerDisplay1">00:00</p>
+            <p id="estadoTimer1">Detenido</p>
         </div>
         <!-- Cronómetro 2 -->
         <h4>Cronómetro 2</h4>
         <div class="cronometro" id="cronometro2">
             <p id="timerDisplay2">00:00</p>
+            <p id="estadoTimer2">Detenido</p>
         </div>
     </div>
-    <!-- Botón de Inicio -->
-
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
