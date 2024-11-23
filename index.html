@@ -8,20 +8,26 @@
 </head>
 <body>
     <h1>Cronómetros Secuenciales</h1>
-
-    <!-- Cronómetro 1 -->
-    <div class="cronometro" id="cronometro1">
-        <div class="reloj" id="Minutos">00</div><div class="reloj" id="Segundos">:00</div>
-        <input type="number" id="inputMinutes1" min="0">
-    </div>
-
-    <!-- Cronómetro 2 -->
-    <div class="cronometro" id="cronometro2">
-        <input type="number" id="inputMinutes2" min="0">
-        <p id="timerDisplay2">00:00</p>
+    <div class="containerOne">
+        <label for="inputTime">Ingrese tiempo de los relojes</label><br>
+        <div class="reloj">
+            <p>Minutos : segundos</p>
+            <input type="number" name="minsDec" id="minsDec" min="0" max="9">
+            <input type="number" name="minsUni" id="minsUni" min="0" max="9">
+            <input type="number" name="secsDec" id="secsDec" min="0" max="9">
+            <input type="number" name="secsUni" id="secsUni" min="0" max="9">
+        </div>
+        <button id="startAllTimers">Iniciar Cronómetros</button>
+        <div class="cronometro" id="cronometro1">
+            <p id="timerDisplay1">00:00</p>
+        </div>
+        <!-- Cronómetro 2 -->
+        <div class="cronometro" id="cronometro2">
+            <p id="timerDisplay2">00:00</p>
+        </div>
     </div>
     <!-- Botón de Inicio -->
-    <button id="startAllTimers">Iniciar Cronómetros</button>
+
     <script src="./main.js"></script>
 </body>
 </html>
