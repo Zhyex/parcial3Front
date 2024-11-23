@@ -6,6 +6,9 @@
 html{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+h1{
+    text-align: center;
+}
 
 .containerOne{
     display: flex;
@@ -27,4 +30,13 @@ html{
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 5px;
+    border-color: cornflowerblue;
+}
+.containerOne button:hover{
+    background-color: aliceblue;
+    color: cornflowerblue;
+    border-radius: 5px;
 }
