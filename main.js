@@ -1,19 +1,16 @@
-//Entradas de tiempo
-
+// Entradas de tiempo
 const inputminsDec = document.getElementById('minsDec');
 const inputminsUni = document.getElementById('minsUni');
 const inputsecsDec = document.getElementById('secsDec');
 const inputsecsUni = document.getElementById('secsUni');
-//Timers para mostrar el tiempo
+// Timers para mostrar el tiempo
 const timerDisplay1 = document.getElementById('timerDisplay1');
 const timerDisplay2 = document.getElementById('timerDisplay2');
-//Botón para iniciar proceso
+// Botón para iniciar proceso
 const startAllTimers = document.getElementById('startAllTimers');
 
 // Función para iniciar la cuenta regresiva
-function startTimer(minutes, display, callback) {
-    let totalTime = minutes * 60; // Convertir minutos a segundos
-
+function startTimer(totalTime, display, callback) {
     const interval = setInterval(() => {
         const mins = Math.floor(totalTime / 60);
         const secs = totalTime % 60;
@@ -31,26 +28,26 @@ function startTimer(minutes, display, callback) {
 
 // Función para iniciar los cronómetros en secuencia
 function startSequentialTimers() {
-    let inputminsDec = inputminsDec.value*10
-    let inputminsUni = inputminsUni.value
-    let inputsecsDec = inputsecsDec.value*10
-    let inputsecsUni = inputsecsUni.value
-/* 
-    if (minutes1 === 0 && minutes2 === 0 && minutes3 === 0) {
-        alert("Por favor, ingresa tiempos para los cronómetros.");
-        return;
-    } */
-   let mins = inputminsDec+inputminsUni;
-   let secs = inputsecsDec +inputsecsDec;
+    const minsDec = parseInt(inputminsDec.value, 10) * 10;
+    const minsUni = parseInt(inputminsUni.value, 10);
+    const secsDec = parseInt(inputsecsDec.value, 10) * 10;
+    const secsUni = parseInt(inputsecsUni.value, 10);
 
-   let timeCrono = mins+ secs/60
+    const totalMinutes = minsDec + minsUni;
+    const totalSeconds = secsDec + secsUni;
+    const totalTime = totalMinutes * 60 + totalSeconds;
+
+    if (isNaN(totalTime) || totalTime <= 0) {
+        alert("Por favor, ingresa un tiempo válido.");
+        return;
+    }
 
     // Iniciar el primer cronómetro
-    startTimer(timeCrono, timerDisplay1, () => {
-        // Cuando el primer cronómetro termina, inicia el segundo
-        startTimer(timeCrono, timerDisplay2);
+    startTimer(totalTime, timerDisplay1, () => {
+        // Cuando el primer cronómetro termine, iniciar el segundo cronómetro
+        startTimer(totalTime, timerDisplay2);
     });
 }
 
-// Evento para el botón de inicio
+// Agregar evento al botón para iniciar los cronómetros
 startAllTimers.addEventListener('click', startSequentialTimers);
