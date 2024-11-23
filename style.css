@@ -40,3 +40,26 @@ h1{
     color: cornflowerblue;
     border-radius: 5px;
 }
+
+.containerTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.containerTwo button{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 5px;
+    border-color: cornflowerblue;
+}
+.containerTwo button:hover{
+    background-color: aliceblue;
+    color: cornflowerblue;
+    border-radius: 5px;
+}

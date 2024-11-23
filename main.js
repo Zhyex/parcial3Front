@@ -78,7 +78,7 @@ function startSequentialTimers() {
     }
 
     // Iniciar el primer cronómetro
-    startTimer(timeCrono, timerDisplay1, estado1, () => {
+    startTimer(totalTime1, timerDisplay1, estadoTimer1, () => {
         // Cuando el primer cronómetro termine, iniciar el segundo cronómetro
         startTimer(totalTime1, timerDisplay2, estadoTimer2);
     });
