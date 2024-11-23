@@ -42,19 +42,20 @@ const startAllTimers = document.getElementById('startAllTimers');
 const startAllSimultaneousTimers = document.getElementById('startAllSimultaneousTimers');
 
 // Función para iniciar la cuenta regresiva
-function startTimer(totalTime, display, estadoDisplay, callback) {
-    estadoDisplay.textContent = 'Ejecutando...';
+function startTimer(minutes, display, estado, callback) {
+    //let totalTime = minutes * 60; // Convertir minutos a segundos
+    estado.textContent = 'Ejecutando'
     const interval = setInterval(() => {
-        const mins = Math.floor(totalTime / 60);
-        const secs = totalTime % 60;
+        const mins = Math.floor(minutes / 60);
+        const secs = minutes % 60;
         display.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 
-        totalTime--;
+        minutes--;
 
         // Cuando llega a 0, detener el cronómetro
-        if (totalTime < 0) {
+        if (minutes < 0) {
             clearInterval(interval);
-            estadoDisplay.textContent = 'Detenido';
+            estado.textContent = 'Detenido'
             if (callback) callback(); // Ejecutar el callback si existe
         }
     }, 1000);
@@ -77,7 +78,7 @@ function startSequentialTimers() {
     }
 
     // Iniciar el primer cronómetro
-    startTimer(totalTime1, timerDisplay1, estadoTimer1, () => {
+    startTimer(timeCrono, timerDisplay1, estado1, () => {
         // Cuando el primer cronómetro termine, iniciar el segundo cronómetro
         startTimer(totalTime1, timerDisplay2, estadoTimer2);
     });
