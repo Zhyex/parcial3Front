@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tres Cronómetros Secuenciales</title>
+</head>
+<body>
+    <h1>Cronómetros Secuenciales</h1>
+
+    <!-- Cronómetro 1 -->
+    <div class="cronometro" id="cronometro1">
+        <div class="reloj" id="Minutos">00</div><div class="reloj" id="Segundos">:00</div>
+        <input type="number" id="inputMinutes1" min="0">
+    </div>
+
+    <!-- Cronómetro 2 -->
+    <div class="cronometro" id="cronometro2">
+        <input type="number" id="inputMinutes2" min="0">
+        <p id="timerDisplay2">00:00</p>
+    </div>
+    <!-- Botón de Inicio -->
+    <button id="startAllTimers">Iniciar Cronómetros</button>
+    <script src="./main.js"></script>
+</body>
+</html>
