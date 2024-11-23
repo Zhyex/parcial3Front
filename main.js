@@ -1,10 +1,13 @@
-// Obtén los elementos del DOM
-const inputMinutes1 = document.getElementById('inputMinutes1');
-const inputMinutes2 = document.getElementById('inputMinutes2');
-const inputMinutes3 = document.getElementById('inputMinutes3');
+//Entradas de tiempo
+
+const inputminsDec = document.getElementById('minsDec');
+const inputminsUni = document.getElementById('minsUni');
+const inputsecsDec = document.getElementById('secsDec');
+const inputsecsUni = document.getElementById('secsUni');
+//Timers para mostrar el tiempo
 const timerDisplay1 = document.getElementById('timerDisplay1');
 const timerDisplay2 = document.getElementById('timerDisplay2');
-const timerDisplay3 = document.getElementById('timerDisplay3');
+//Botón para iniciar proceso
 const startAllTimers = document.getElementById('startAllTimers');
 
 // Función para iniciar la cuenta regresiva
@@ -28,22 +31,24 @@ function startTimer(minutes, display, callback) {
 
 // Función para iniciar los cronómetros en secuencia
 function startSequentialTimers() {
-    const minutes1 = parseInt(inputMinutes1.value, 10) || 0;
-    const minutes2 = parseInt(inputMinutes2.value, 10) || 0;
-    const minutes3 = parseInt(inputMinutes3.value, 10) || 0;
-
+    let inputminsDec = inputminsDec.value*10
+    let inputminsUni = inputminsUni.value
+    let inputsecsDec = inputsecsDec.value*10
+    let inputsecsUni = inputsecsUni.value
+/* 
     if (minutes1 === 0 && minutes2 === 0 && minutes3 === 0) {
         alert("Por favor, ingresa tiempos para los cronómetros.");
         return;
-    }
+    } */
+   let mins = inputminsDec+inputminsUni;
+   let secs = inputsecsDec +inputsecsDec;
+
+   let timeCrono = mins+ secs/60
 
     // Iniciar el primer cronómetro
-    startTimer(minutes1, timerDisplay1, () => {
+    startTimer(timeCrono, timerDisplay1, () => {
         // Cuando el primer cronómetro termina, inicia el segundo
-        startTimer(minutes2, timerDisplay2, () => {
-            // Cuando el segundo cronómetro termina, inicia el tercero
-            startTimer(minutes3, timerDisplay3);
-        });
+        startTimer(timeCrono, timerDisplay2);
     });
 }
 
